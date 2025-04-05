@@ -9,7 +9,19 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.cristianfilip11.pluginintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow
+
+                id="Focus Timer"
+                anchor="right"
+                factoryClass="com.github.cristianfilip11.pluginintellij.toolWindow.FocusTimerToolWindowFactory"
+                icon="/icons/timer.png"
+                secondary="true"
+        />
+        <notificationGroup
+                id="Focus Timer Notification Group"
+                displayType="BALLOON"
+                isLogByDefault="true"/>
+
         <postStartupActivity implementation="com.github.cristianfilip11.pluginintellij.startup.MyProjectActivity" />
     </extensions>
 </idea-plugin>
